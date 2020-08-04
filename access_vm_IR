@@ -1,0 +1,83 @@
+ssh -L 5601:localhost:5601 student@host-3.cs734.cs.odu.edu
+
+
+
+
+copy link address of elastic search
+
+
+wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.6.1.rpm
+
+extract tar file
+
+vim elasticsearch.yml
+
+:wq
+
+./elasticsearch
+
+screen -S elastic
+
+install Screen if not working
+
+run 
+
+./elasticsearch
+
+CTRL A+D
+
+screen -ls    --->>>> to know how many session you arer running
+
+screen -S elastic
+
+
+
+scp -P 2264 quotes.json student@host-3.cs734.cs.odu.edu:/home/student/elasticsearch-6.6.1/quotes.json
+
+
+
+scp /Users/puneethshankar/Desktop/archiv.json student@host-3.cs734.cs.odu.edu:~/.
+
+scp archiv.json pbikkasa@linux.cs.odu.edu
+
+/anaconda3/lib/python3.6/site-packages/arXiv/archiv.json
+
+/Users/puneethshankar/Desktop/archiv.json
+
+
+scp -P 2222 archiv.json student@host-3.cs734.cs.odu.edu:/home/student
+
+scp archiv.json.zip student@host-3.cs734.cs.odu.edu:/home/student
+
+
+curl -XPOST 'http://127.0.0.1:9201' -d archiv.json
+curl -XPOST 'http://127.0.0.1:9201' -d @archiv.json
+
+curl -H "Content-Type: application/json" -XPOST "http://127.0.0.1:9201/test/test/1" -d @archiv.json
+
+curl -X PUT "http://localhost:9220/companies_list/_mapping/companies_list" -d "D:\ELK\mappings\companies_list.mapping" -H "Content-Type: application/json"
+curl -X PUT "http://127.0.0.1:9201/test/test/1" -d @archiv.json
+
+curl -XGET http://127.0.0.1:9201/ -H "Content-Type: application/json" -d @archiv.json
+
+curl -XGET http://127.0.0.1:9201/ -H "Content-Type: application/json" --data-binary @archiv1.json
+
+curl -XPOST "http://localhost:9201/cp/docs" -H "Content-Type: application/json" --data-binary @archiv1.json
+
+
+curl -s -XPOST "http://localhost:9201/_bulk" "Content-Type: application/json" --data-binary @archiv.json
+
+
+curl -XPOST "http://localhost:9201/_bulk" "Content-Type: application/json" --data-binary @archiv1.json
+
+curl -XPOST http://localhost:9200/cp/products -d "@products.json"
+
+
+
+
+
+
+
+
+
+

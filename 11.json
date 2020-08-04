@@ -1,0 +1,68 @@
+{ "index" : { "_index" : "research", "_type" : "doc", "_id" : "1" } }
+{
+"title": "How to Estimate the Ability of a Metaheuristic Algorithm to Guide Heuristics During Optimization", 
+"authors": ["Milo\u0161 Simi\u0107"],
+"description": "  Metaheuristics are general methods that guide application of concrete\nheuristic(s) to problems that are too hard to solve using exact algorithms.\nHowever, even though a growing body of literature has been devoted to their\nstatistical evaluation, the approaches proposed so far are able to assess only\ncoupled effects of metaheuristics and heuristics. They do not reveal us\nanything about how efficient the examined metaheuristic is at guiding its\nsubordinate heuristic(s), nor do they provide us information about how much the\nheuristic component of the combined algorithm contributes to the overall\nperformance. In this paper, we propose a simple yet effective methodology of\ndoing so by deriving a naive, placebo metaheuristic from the one being studied\nand comparing the distributions of chosen performance metrics for the two\nmethods. We propose three measures of difference between the two distributions.\nThose measures, which we call BER values (benefit, equivalence, risk) are based\non a preselected threshold of practical significance which represents the\nminimal difference between two performance scores required for them to be\nconsidered practically different. We illustrate usefulness of our methodology\non the example of Simulated Annealing, Boolean Satisfiability Problem, and the\nFlip heuristic.\n", 
+"subject": "Artificial Intelligence (cs.AI)", 
+"pdf": "https://arxiv.org/pdf/1904.00103.pdf", 
+"submission": "Fri, 29 Mar 2019 22:06:40 UTC (61 KB)"
+}
+
+
+
+
+
+$ curl -s -H "Content-Type: application/x-ndjson" -XPOST localhost:9200/_bulk --data-binary @index.json
+
+
+curl -XGET 'http://127.0.0.1:9200/research/_search?pretty&size=2' | jq '.'
+
+
+
+curl -X GET "localhost:9200/research/_search?q=authors:Mahtab Ahmed"
+
+./ngrok authtoken 3xsyMgikqtnsnyWwQiZxL_28cAXSuKu7T7Eo3rGgrRE
+
+
+./ngrok authtoken 3xsyMgikqtnsnyWwQiZxL_28cAXSuKu7T7Eo3rGgrRE
+
+
+
+curl -X GET "localhost:9200/twitter/_search" -H 'Content-Type: application/json' -d'
+{
+    "track_total_hits": false,
+     "query": {
+        "match" : {
+            "message" : "Elasticsearch"
+        }
+     }
+}
+'
+curl -X GET "localhost:9200/twitter/_search" -H 'Content-Type: application/json' -d'
+{
+    "track_total_hits": false,
+     "query": {
+        "match" : {
+            "message" : "Elasticsearch"
+        }
+     }
+}
+'
+
+
+
+curl -X GET "localhost:9200/_search/template" -H 'Content-Type: application/json' -d'
+{
+    "source": {
+        "query": {
+            "term": {
+                "message": "{{query_string}}"
+            }
+        }
+    },
+    "params": {
+        "query_string": "search for these words"
+    }
+}
+'
+
