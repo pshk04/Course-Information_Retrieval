@@ -10,4 +10,4 @@ For Eg:
 
 For search string "Machine Learning", the site would list all the research papers hosted on arXiv.org for ML and crawls through the links for other matching papers related to Machine Learning.
 
-This is built using Elastic Search and beautifulSoup.
+This is built using ElasticSearch, Scrapy (for web scraping) and beautifulSoup.
